@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Sandwich Maker</title>
-</head>
-<body>
-	<h1>Sandwich Maker</h1>
+	<head>
+	<title>Sandwich Builder</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<h1>Sandwich Builder</h1>
+			<div class='container'>
+				<div class='row'>
+					<div class='.col-md-4 thumbnail text-center'>
+						<label for="bread">Bread Options:</label>
+						<div id='breadDiv' class='text-center'>
+							<input type="checkbox" name="bread" value="pumpernickle"> Pumpernickle
+							<input type="checkbox" name="bread" value="nann"> Nann
+							<input type="checkbox" name="bread" value="stale"> Stale
+							<input type="checkbox" name="bread" value='None'> None
+						</div>
+					</div><br>
+					<div class='.col-md-4 thumbnail text-center'>
+						<label for="meat">Meat Options:</label>
+						<div id='meatDiv' class='text-center'>
+							<input type="checkbox" name="meat" value="dragon"> Dragon
+							<input type="checkbox" name="meat" value="unicorn"> Unicorn
+							<input type="checkbox" name="meat" value="troll"> Troll	
+							<input type="checkbox" name="meat" value='None'> None	
+						</div>
+					</div><br>
+					<div class='.col-md-4 thumbnail text-center'>
+						<label for="cheese">Cheese Options:</label>
+						<div id='cheeseDiv' class='text-center'>
+							<input type="checkbox" name="cheese" value="colby"> Colby
+							<input type="checkbox" name="cheese" value="jack"> Jack
+							<input type="checkbox" name="cheese" value="swiss"> Swiss
+							<input type="checkbox" name="cheese" value='None'> None		
+						</div>
+					</div><br>
+					<div class='.col-md-4 thumbnail text-center'>
+						<label for="veggie">Veggie Options:</label>
+						<div id='veggieDiv' class='text-center'>
+							<input type="checkbox" name="veggie" value="grass"> Grass
+							<input type="checkbox" name="veggie" value="spinach"> Spinach
+							<input type="checkbox" name="veggie" value="lettuce"> Lettuce	
+							<input type="checkbox" name="cheese" value='None'> None	
+						</div>
+					</div><br>
+					<div class='.col-md-4 thumbnail text-center'>
+						<label for="condiments">Condiments Options:</label>
+						<div id='condimentsDiv' class='text-center'>
+							<input type="checkbox" name="condiments" value="mayo"> Mayo
+							<input type="checkbox" name="condiments" value="mustard"> Mustard
+							<input type="checkbox" name="condiments" value="bbq"> BBQ
+							<input type="checkbox" name="condiments" value='None'> None		
+						</div>
+					</div><br>
+					<div class='container'>
+						<div class='row'>
+							<div class="col-md-12">
+								<h3>Grand Total:</h3>
+							</div>
+								<h4 id="sandwichTotal" class="col-md-12"></h4>
+						</div>
+					</div>
+				</div>
+			</div>
 
-</body>
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="./javascripts/bread.js"></script>
+			<script type="text/javascript" src="./javascripts/meat.js"></script>
+			<script type="text/javascript" src="./javascripts/cheese.js"></script>
+			<script type="text/javascript" src="./javascripts/veggie.js"></script>
+			<script type="text/javascript" src="./javascripts/condiments.js"></script>
+			<script type="text/javascript" src="./javascripts/sandwichbuilder.js"></script>
+	</body>
 </html>
-	<fieldset>
-		<header>Choose Your Options</header>
 
-		<h2>Pick your Grain:</h2>
-		<div class="choosers" id="breads"> 
-			<button type="button" id="btn--Pumpernickle"> Pumpernickle </button>
-			<button type="button" id="btn--Nann"> Nann </button>
-			<button type="button" id="btn--Nine Grain"> Nine Grain </button>
-		</div>
 
-		<h2>Pick your Protein:</h2>
-		<div class="choosers" id="meats">
-			<button type="button" id="btn--Dragon"> Dragon </button>
-			<button type="button" id="btn--Whale"> Whale </button>
-			<button type="button" id="btn--Grizzly Bear"> Grizzly Bear </button>
-		</div>
 
-		<h2>Pick your Cheese:</h2>
-		<div class="choosers" id="cheeses">
-			<button type="button" id="btn--Pepper Jack"> Pepper Jack </button>
-			<button type="button" id="btn--Colby"> Colby </button>
-			<button type="button" id="btn--Cheddar"> Cheddar </button>
-		</div>
-
-		<h2>Pick your Juice:</h2>
-		<div class="choosers" id="condiments">
-			<button type="button" id="btn--Ketchup"> Ketchup </button>
-			<button type="button" id="btn--Mayo"> Mayo </button>
-			<button type="button" id="btn--Mustard"> Mustard </button>
-		</div>
-
-		<h2>Pick your Green Stuff:</h2>
-		<div class="choosers" id="veggies">
-			<button type="button" id="btn--Grass"> Grass </button>
-			<button type="button" id="btn--Rose Petals"> Rose Petals </button>
-			<button type="button" id="btn--Oak Leaves"> Oak Leaves </button>
-		</div>
-
-	</fieldset>
-
-	<div id="createdSandwich">
-	</div>
-	<div id="grandTotal">
-	</div>
-<script type="text/javascript" src="./bread.js"></script>
-<script type="text/javascript" src="./cheese.js"></script>
-<script type="text/javascript" src="./condiments.js"></script>
-<script type="text/javascript" src="./meat.js"></script>
-<script type="text/javascript" src="./veggies.js"></script>
-<script type="text/javascript" src="./sandwich.js"></script>
-</body>
-</html>
